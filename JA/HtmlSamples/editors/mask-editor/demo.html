@@ -1,0 +1,47 @@
+<script src="http://jp.dev.igniteui.local/17-1/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://dev.igniteui.local/17-1/IgniteUI/js/infragistics.core.js"></script>
+<script src="http://dev.igniteui.local/17-1/IgniteUI/js/infragistics.lob.js"></script>
+<link href="http://dev.igniteui.local/17-1/IgniteUI/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://dev.igniteui.local/17-1/IgniteUI/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://dev.igniteui.local/17-1/IgniteUI/js/i18n/infragistics-ja.js"></script>
+
+<div id="container" class="clearfix">
+        <div id="igMaskEditorsContainer">
+            <form id="form" action="javascript:console.log('送信');">
+                <div class="group-fields">
+                    <label>RAW テキスト:</label>
+                    <div id="msk1"></div>
+                </div>
+                <div class="group-fields">
+                    <label>必要なプロンプトを持つ RAW テキスト:</label>
+                    <div id="msk2"></div>
+                </div>
+                <div class="group-fields">
+                    <label>すべてのプロンプトを持つ RAW テキスト:</label>
+                    <div id="msk3"></div>
+                </div>
+                <div class="group-fields">
+                    <label>リテラルを持つ RAW テキスト:</label>
+                    <div id="msk4"></div>
+                </div>
+                <div class="group-fields">
+                    <label>必要なプロンプトおよびリテラルを持つ RAW テキスト:</label>
+                    <div id="msk5"></div>
+                </div>
+                <div class="group-fields">
+                    <label>すべてのテキスト (デフォルト値):</label>
+                    <div id="msk6"></div>
+                </div>
+                <input type="submit" id="submitBtn" value="送信"></input>
+            </form>
+        </div>
+
+        <div id="ValuesContainer">
+            <h4>送信した値:</h4>
+            <div class="divHeight">
+                <p class="pStyle" id="results">
+            </div>
+        </div>
+    </div>
