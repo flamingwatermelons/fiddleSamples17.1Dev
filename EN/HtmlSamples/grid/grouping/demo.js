@@ -3,6 +3,8 @@ $(function () {
 				autoGenerateColumns: false,
 				width: "100%",
 				height: "500px",
+			    rowVirtualization: true,
+			    virtualizationMode: "continuous",
 				columns: [
 					{ headerText: "Order ID", key: "OrderID", dataType: "number", width: "0%", hidden: true },
 					{ headerText: "Ship Country", key: "ShipCountry", dataType: "string", width: "12%" },
@@ -24,9 +26,6 @@ $(function () {
 							},
 							{
 								summaryFunction: "Count", label: "Count = "
-							},
-							{
-								summaryFunction: "Avg", label: "Avg = ", format: ".##"
 							},
 							{
 								summaryFunction: "Min", label: "Min = "
@@ -62,9 +61,6 @@ $(function () {
 						summarySettings: {
 							summaryFormat: "#"
 						}
-					},
-					{
-						name: "Paging"
 					},
 					{
 						name: "Filtering"
