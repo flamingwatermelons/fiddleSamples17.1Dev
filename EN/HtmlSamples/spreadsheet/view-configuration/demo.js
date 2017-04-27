@@ -13,7 +13,7 @@ $.ig.loader({
 
 			var workbook = null;
 			var xhr = new XMLHttpRequest();
-			xhr.open('GET', 'http://dev.igniteui.local/17-1/data-files/LoadingData.xlsx', true);
+			xhr.open('GET', 'http://dev.igniteui.local/17-1/data-files/FormattingData.xlsx', true);
 			xhr.responseType = 'arraybuffer';
 
 			xhr.onload = function (e) {
