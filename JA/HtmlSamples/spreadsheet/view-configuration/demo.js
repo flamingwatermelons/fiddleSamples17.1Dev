@@ -114,5 +114,20 @@ $.ig.loader({
 					}
 				}
 			});
+			$("#delSheet").click(function () {
+				$('#spreadsheet').igSpreadsheet('executeAction', "deleteWorksheets");
+			});
+			$("#delContent").click(function () {
+				$('#spreadsheet').igSpreadsheet('executeAction', "clearContents");
+			});
+			$("#bold").click(function () {
+				$('#spreadsheet').igSpreadsheet('executeAction', "toggleBold");
+			});
+			$("#italic").click(function () {
+				$('#spreadsheet').igSpreadsheet('executeAction', "toggleItalic");
+			});
+			$("#underline").click(function () {
+				$('#spreadsheet').igSpreadsheet('executeAction', "toggleUnderline");
+			});
 		});
 });
