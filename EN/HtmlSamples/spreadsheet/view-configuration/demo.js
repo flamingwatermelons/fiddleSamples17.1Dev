@@ -2,7 +2,7 @@ $(function () {
 $.ig.loader({
 			scriptPath: "http://dev.igniteui.local/17-1/IgniteUI/js/",
 			cssPath: "http://dev.igniteui.local/17-1/IgniteUI/css/",
-			resources: "igSpreadsheet,igEditors"
+			resources: "igSpreadsheet,igExcel.LoadSaveXlsx,igEditors"
 		});
 	 
 		$(function () {
@@ -13,7 +13,7 @@ $.ig.loader({
 
 			var workbook = null;
 			var xhr = new XMLHttpRequest();
-			xhr.open('GET', 'http://dev.igniteui.local/17-1/data-files/sample-data.xlsx', true);
+			xhr.open('GET', 'http://dev.igniteui.local/17-1/data-files/LoadingData.xlsx', true);
 			xhr.responseType = 'arraybuffer';
 
 			xhr.onload = function (e) {
@@ -22,6 +22,8 @@ $.ig.loader({
 				$.ig.excel.Workbook.load(responseArray, function () {
 					workbook = arguments[0];
 					$("#spreadsheet").igSpreadsheet("option", "workbook", workbook);
+				}, function () {
+					console.log("fail");
 				})
 			};
 
