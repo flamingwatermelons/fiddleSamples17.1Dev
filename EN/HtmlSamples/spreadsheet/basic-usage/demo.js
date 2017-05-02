@@ -4,7 +4,7 @@ $.ig.loader({
 			cssPath: "http://dev.igniteui.local/17-1/IgniteUI/css/",
 			resources: "igSpreadsheet,igExcel.LoadSaveXlsx,igEditors"
 		});
-	 
+			
 		$(function () {
 			$("#spreadsheet").igSpreadsheet({
 				height: "600",
@@ -22,11 +22,12 @@ $.ig.loader({
 				$.ig.excel.Workbook.load(responseArray, function () {
 					workbook = arguments[0];
 					$("#spreadsheet").igSpreadsheet("option", "workbook", workbook);
+					$("#spreadsheet").igSpreadsheet("option", "activeCell", "J15");
+					$("#spreadsheet").igSpreadsheet("option", "zoomLevel", "95");
 				}, function () {
 					console.log("fail");
 				})
 			};
-
 			xhr.send();
 		});
 });
