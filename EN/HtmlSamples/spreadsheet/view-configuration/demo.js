@@ -6,6 +6,11 @@ $.ig.loader({
 		});
 		
 		$(function () {
+
+			$(function () {
+				$("#tabs").tabs();
+			});
+
 				$("#spreadsheet").igSpreadsheet({
 					height: "600",
 					width: "100%"
@@ -36,20 +41,28 @@ $.ig.loader({
 					min: 10,
 					max: 400,
 					value: 100,
-					step: 25
+					step: 1
 				});
 
 				$("#zoomIn").click(function () {
 					$('#spreadsheet').igSpreadsheet('executeAction', "zoomIn");
+					var zoomInLevel = $('#spreadsheet').igSpreadsheet('option', "zoomLevel");
+					$("#zoomSlider").slider("value", zoomInLevel);
 				});
 				$("#zoomOut").click(function () {
 					$('#spreadsheet').igSpreadsheet('executeAction', "zoomOut");
+					var zoomOutLevel = $('#spreadsheet').igSpreadsheet('option', "zoomLevel");
+					$("#zoomSlider").slider("value", zoomOutLevel);
 				});
 				$("#zoom").click(function () {
 					$('#spreadsheet').igSpreadsheet('executeAction', "zoomTo100");
+					var zoomLevel = $('#spreadsheet').igSpreadsheet('option', "zoomLevel");
+					$("#zoomSlider").slider("value", zoomLevel);
 				});
 				$("#zoomSelection").click(function () {
 					$('#spreadsheet').igSpreadsheet('executeAction', "zoomToSelection");
+					var zoomSelectionLevel = $('#spreadsheet').igSpreadsheet('option', "zoomLevel");
+					$("#zoomSlider").slider("value", zoomSelectionLevel);
 				});
 
 				$("#split").click(function () {
