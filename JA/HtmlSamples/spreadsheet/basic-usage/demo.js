@@ -21,13 +21,19 @@ $.ig.loader({
 				var responseArray = new Uint8Array(this.response);
 				$.ig.excel.Workbook.load(responseArray, function () {
 					workbook = arguments[0];
-					$("#spreadsheet").igSpreadsheet("option", "workbook", workbook);
-					$("#spreadsheet").igSpreadsheet("option", "activeCell", "J15");
-					$("#spreadsheet").igSpreadsheet("option", "zoomLevel", "95");
+					setInitialSettings();
 				}, function () {
 					console.log("fail");
 				})
 			};
 			xhr.send();
+
+			function setInitialSettings() {
+				$("#spreadsheet").igSpreadsheet("option", "workbook", workbook);
+				var ws = workbook.worksheets("Table data");
+				$("#spreadsheet").igSpreadsheet("option", "activeWorksheet", ws);
+				$("#spreadsheet").igSpreadsheet("option", "activeCell", "J15");
+				$("#spreadsheet").igSpreadsheet("option", "zoomLevel", "95");
+			}
 		});
 });
