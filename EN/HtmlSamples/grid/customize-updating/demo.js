@@ -135,8 +135,10 @@ var northwindEmployees = [
 								delete self._blockSlide;
 							}
 							evt.stopPropagation();
-						}
-					}, "td")
+						},
+						pointerdown: function (evt) { evt.stopPropagation(); },
+						touchstart: function (evt) { evt.stopPropagation(); }
+					}, "td");
 					d.bind({
 						// bind to keydown so that the dialog can be closed on ENTER and ESC keypresses,
 						// also handles the TAB sequence to wrap around the elements of the dialog
