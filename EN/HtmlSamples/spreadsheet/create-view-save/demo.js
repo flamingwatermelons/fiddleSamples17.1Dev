@@ -98,11 +98,9 @@ $.ig.loader({
 
 			// Add a grand total which is bold and larger than the rest of the text to call attention to it.
 			sheet.getCell('E17').value('GRAND TOTAL');
-			sheet.getCell('E17').cellFormat().font().height(14 * 20);
 			sheet.getCell('E17').cellFormat().font().bold(true);
 
 			sheet.getCell('G17').applyFormula('=SUM(G4:G16)');
-			sheet.getCell('G17').cellFormat().font().height(14 * 20);
 			sheet.getCell('G17').cellFormat().font().bold(true);
 
 			// Load the workbook in igSpreadsheet
