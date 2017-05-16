@@ -6,7 +6,14 @@ $.ig.loader({
 			ready: function () {
 				$("#spreadsheet").igSpreadsheet({
 					height: "600",
-					width: "100%"
+					width: "100%",
+					activeWorksheetChanged(evt, ui) {
+						if (ui.newActiveWorksheetName == "Statistics") {
+							$("#spreadsheet").igSpreadsheet("option", "activeCell", "E7");
+						} else {
+							$("#spreadsheet").igSpreadsheet("option", "activeCell", "J15");
+						}
+					}
 				});
 
 				var workbook = null;

@@ -1,34 +1,138 @@
-#zoomIn {
-			width: 100px;
-			height: 20px;
+.sampleContainer .ui-tabs .ui-tabs-panel {
+            background:#ddd;
+            border-radius:0;
 		}
+        .sampleContainer .ui-tabs {
+            padding: 0;
+            border-radius:0;
+            border:none;
+        }
 
-		#zoomOut {
-			width: 100px;
-			height: 20px;
-		}
+        .sampleContainer .ui-tabs .ui-tabs-nav {
+            padding:0;
+            background:transparent;
+            border:none;
+        }
 
-		#zoom {
-			width: 100px;
-			height: 20px;
-		}
+        .clearfix:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
 
-		#split {
-			width: 100px;
-			height: 20px;
-		}
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-default {
+            background:transparent;
+        }
 
-		#freeze {
-			width: 100px;
-			height: 20px;
-		}
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-default,
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active {
+            border:none;
+        }
 
-		#zoomSelection {
-			width: 50px;
-			height: 20px;
-		}
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-default:hover {
+            background:#ddd;
+        }
 
-		.actions {
-			width: 100%;
-			height:150px;
-		}
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active {
+            background:#ddd;
+            color:#333;
+        }
+
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active a {
+            color:#333;
+        }
+
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active:hover {
+            background:#ddd;
+            color:#333;
+        }
+
+        #freeze {
+            margin-right: 10px;
+        }
+
+        #zoomSlider {
+            max-width: 30%;
+            min-width: 30%;
+            float: left;
+            margin: 9px 9px 9px 0px;
+        }
+
+        .zoom-slider {
+           min-width:300px;
+        }
+
+        .spreadsheet-sample-btn,
+        #freeze,
+        #zoomSlider,
+        .f-left {
+            float: left;
+        }
+
+        .spreadsheet-sample-btn
+        {
+            max-width: 200px;
+            padding: 8px;
+            background: #fff;
+            color:#444;
+            text-align: center;
+            border-radius: 3px;
+            font-size: 12px;
+            text-transform: uppercase;
+            min-width: 70px;
+            margin-right: 10px;
+            cursor:pointer;
+            border:1px solid #ccc;
+        }
+
+        .spreadsheet-sample-btn:hover {
+            border-color:#09f;
+        }
+
+        #bold {
+            font-weight:bold
+        }
+
+        #italic {
+            font-style:italic;
+        }
+
+        #underline {
+            text-decoration:underline;
+        }
+
+        #delSheet:hover,
+        #delContent:hover
+         {
+            color:#fff;
+            background:indianred;
+        }
+
+        #delSheet,
+        #delContent {
+            border-color:indianred;
+            color:indianred;
+        }
+
+        .ui-widget.ui-widget-content.spreadsheet-sample {
+            border:none;
+            border-radius:0;
+        }
+
+
+        .show-row {
+            position:relative;
+            margin-bottom:10px;
+        }
+        .show-row:last-of-type {
+            margin-bottom:0;
+        } 
+        .spreadsheet-sample .show-row-checkbox {
+            position:absolute;
+            left:0;
+            top:-3px;
+        }
+        .show-row-text {
+            padding-left:23px;
+            display:inline-block;
+        }
