@@ -3,7 +3,7 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="http://dev.igniteui.local/17-1/IgniteUI/js/infragistics.loader.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<div class="actions" id="tabs">
+	<div class="actions spreadsheet-sample" id="tabs">
 		<ul>
 			<li><a href="#tabs-1">Show</a></li>
 			<li><a href="#tabs-2">Zoom Level</a></li>
@@ -11,31 +11,57 @@
 			<li><a href="#tabs-4">Formatting</a></li>
 			<li><a href="#tabs-5">Delete</a></li>
 		</ul>
-		<div class="show" id="tabs-1">
-			<div id="gridlines"></div>Gridlines <br>
-			<div id="headings"></div>Headings <br>
-			<div id="formulabar"></div>Formula bar
+
+		<div class="show clearfix" id="tabs-1">
+			<div class="show-row">
+                <span for="gridlines" class="show-row-text">
+                    <div id="gridlines" class="show-row-checkbox"></div>
+                    Gridlines
+                </span>
+            </div>
+            <div class="show-row">
+                <span for="headings" class="show-row-text">
+                    <div id="headings" class="show-row-checkbox"></div>
+                    Headings
+                </span>
+            </div>
+            <div class="show-row">
+                <span for="formulabar" class="show-row-text">
+                    <div id="formulabar" class="show-row-checkbox"></div>
+                    Formula bar
+                </span>
+            </div>
+        </div>
+
+		<div class="zoom clearfix" id="tabs-2">
+			<div class="clearfix zoom-slider f-left">
+                <div id="zoomOut" class="spreadsheet-sample-btn"> Zoom Out</div>
+                <div id="zoomSlider"></div>
+                <div id="zoomIn" class="spreadsheet-sample-btn">Zoom In</div>
+                  
+            </div>
+			<div class="f-left">
+                <div id="zoom" class="spreadsheet-sample-btn"> Zoom 100%</div>
+                <div id="zoomSelection" class="spreadsheet-sample-btn">Zoom Selection</div>
+            </div>
 		</div>
-		<div class="zoom" id="tabs-2">
-			<div id="zoomIn">Zoom In</div>
-			<div id="zoomSlider"></div>
-			<div id="zoomOut"> Zoom Out</div>
-			<div id="zoom"> Zoom 100%</div>
-			<div id="zoomSelection">Zoom Selection</div>
-		</div>
-		<div class="sheet" id="tabs-3">
+
+		<div class="sheet clearfix" id="tabs-3">
 			<div id="freeze"></div>
-			<div id="split">Split</div>
+			<div id="split" class="spreadsheet-sample-btn">Split</div>
 		</div>
-		<div class="formatting" id="tabs-4">
-			<div id="bold">Bold</div>
-			<div id="italic">Italic</div>
-			<div id="underline">Underline</div>
+
+		<div class="formatting clearfix" id="tabs-4">
+			<div id="bold" class="spreadsheet-sample-btn">Bold</div>
+			<div id="italic" class="spreadsheet-sample-btn">Italic</div>
+			<div id="underline" class="spreadsheet-sample-btn">Underline</div>
 		</div>
-		<div class="delete" id="tabs-5">
-			<div id="delSheet">Delete Sheet</div>
-			<div id="delContent">Delete Content</div>
+
+		<div class="delete clearfix" id="tabs-5">
+			<div id="delSheet" class="spreadsheet-sample-btn">Delete Sheet</div>
+			<div id="delContent" class="spreadsheet-sample-btn">Delete Content</div>
 		</div>
+
 	</div>
 	<div id="spreadsheet"></div>
 	<script type="text/javascript">
