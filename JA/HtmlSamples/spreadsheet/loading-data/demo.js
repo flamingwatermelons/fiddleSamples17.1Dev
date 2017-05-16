@@ -48,7 +48,7 @@ $.ig.loader({
 		});
 
 		function setWorkbook() {
-			if ($("#spreadsheet").igSpreadsheet() !== undefined && workbook != null) {
+			if ($("#spreadsheet").igSpreadsheet !== undefined && workbook != null) {
 				//load specific workbook
 				$("#spreadsheet").igSpreadsheet("option", "workbook", workbook);
 			}
