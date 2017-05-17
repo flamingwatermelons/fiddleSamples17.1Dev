@@ -123,6 +123,9 @@
             border-radius:0;
         }
 
+        .ui-igspreadsheet .ui-menu-item {
+            white-space:nowrap;
+        }
 
         .show-row {
             position:relative;
