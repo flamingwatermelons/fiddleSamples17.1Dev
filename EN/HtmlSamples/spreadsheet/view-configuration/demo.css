@@ -1,7 +1,11 @@
 .sampleContainer .ui-tabs .ui-tabs-panel {
-            background:#ddd;
+            background:#efefef;
             border-radius:0;
+            border-color:#ddd;
+            border-bottom:none;
 		}
+
+
         .sampleContainer .ui-tabs {
             padding: 0;
             border-radius:0;
@@ -30,21 +34,26 @@
         }
 
         .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-default:hover {
-            background:#ddd;
+            background:#efefef;
         }
 
         .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active {
-            background:#ddd;
+            background:#efefef;
             color:#333;
+            border: 1px solid #ddd;
+            border-bottom: none;
         }
 
         .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active a {
             color:#333;
+            font-weight:bold;
         }
 
         .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active:hover {
-            background:#ddd;
+            background:#efefef;
             color:#333;
+            border: 1px solid #ddd;
+            border-bottom: none;
         }
 
         #freeze {
@@ -53,13 +62,9 @@
 
         #zoomSlider {
             max-width: 30%;
-            min-width: 30%;
+            min-width: 100px;
             float: left;
             margin: 9px 9px 9px 0px;
-        }
-
-        .zoom-slider {
-           min-width:300px;
         }
 
         .spreadsheet-sample-btn,
@@ -79,7 +84,6 @@
             border-radius: 3px;
             font-size: 12px;
             text-transform: uppercase;
-            min-width: 70px;
             margin-right: 10px;
             cursor:pointer;
             border:1px solid #ccc;
@@ -135,4 +139,50 @@
         .show-row-text {
             padding-left:23px;
             display:inline-block;
+        }
+
+        .spreadsheet-icon {
+            background:url('http://dev.igniteui.local/17-1/images/samples/spreadsheet/sprite.png');
+            width:16px;
+            height:16px;
+            overflow:hidden;
+        }
+
+        .zoom-in-icon {
+            background-position: 0 0;
+        }
+         .zoom-out-icon {
+            background-position: 0 -16px;
+        }
+
+        .zoom-selection {
+            background-position: 0 -32px;
+        }
+
+        .zoom-reset {
+            background-position: 0 -224px;
+        }
+
+        .ribbon-bold {
+            background-position: 0 -304px;
+        }
+
+        .ribbon-italic {
+            background-position: 0 -320px;
+        }
+
+        .ribbon-underline {
+            background-position: 0 -208px;
+        }
+
+        .spreadsheet-sample a {
+            color:#666!important;
+        }
+
+        .spreadsheet-sample  .ui-slider {
+            background:#555;
+        }
+
+        .spreadsheet-sample .ui-slider-handle {
+            background:#fff;
         }
