@@ -9,7 +9,13 @@
 			<li>サンプル <a href="http://jp.dev.igniteui.local/17-1/HtmlSamples/javascript-excel-library/report.xlsx" download="">Excel ファイルのダウンロード</a></li>
 			<li>[ファイルを選択]/[参照...] ボタンをクリックして、サンプル Excel ファイルを選択します。</li>
 		</ol>
-		<input type="file" id="input" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></input>
+        <div class="spreadsheet-sample-btn">
+            <input type="file" id="input" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></input>
+            <span>
+                Choose a file...
+            </span>
+        </div>
+		
 		<div id="result"></div>
 		<div id="spreadsheet"></div>
 	</div>
