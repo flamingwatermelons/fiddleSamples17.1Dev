@@ -134,7 +134,7 @@
         .spreadsheet-sample .show-row-checkbox {
             position:absolute;
             left:0;
-            top:-3px;
+            top:0;
         }
         .show-row-text {
             padding-left:23px;
