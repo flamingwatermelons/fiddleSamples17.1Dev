@@ -1,5 +1,10 @@
 $(function () {
-function createTableWorkbook() {
+$.ig.loader({
+            scriptPath: "http://dev.igniteui.local/17-1/IgniteUI/js/",
+            resources: 'igExcel'
+        });
+
+        function createTableWorkbook() {
             var workbook = new $.ig.excel.Workbook($.ig.excel.WorkbookFormat.excel2007);
             var sheet = workbook.worksheets().add('Sheet1');
             sheet.columns(0).setWidth(72, $.ig.excel.WorksheetColumnWidthUnit.pixel);

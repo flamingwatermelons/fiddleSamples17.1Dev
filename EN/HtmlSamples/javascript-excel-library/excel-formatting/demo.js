@@ -1,5 +1,10 @@
 $(function () {
-function createFormattingWorkbook() {
+$.ig.loader({
+            scriptPath: "http://dev.igniteui.local/17-1/IgniteUI/js/",
+            resources: 'igExcel'
+        });
+
+        function createFormattingWorkbook() {
 
             var workbook = new $.ig.excel.Workbook($.ig.excel.WorkbookFormat.excel2007);
             var sheet = workbook.worksheets().add('Sheet1');
