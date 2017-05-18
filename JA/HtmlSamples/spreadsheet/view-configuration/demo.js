@@ -94,7 +94,7 @@ $.ig.loader({
 							}
 						}
 					});
-					var listItems = [{ id: 1, action: "$$(freeze_pane)" }, { id: 2, action: "$$(freeze_first_row)" }, { id: 3, action: "$$(freeze_first_column)" }];
+					var listItems = [{ id: 1, action: "ペインを固定" }, { id: 2, action: "最初の行を固定" }, { id: 3, action: "最初の列を固定" }];
 					$("#freeze").igCombo({
 						dataSource: listItems,
 						textKey: "action",
@@ -104,26 +104,26 @@ $.ig.loader({
 						autoSelectFirstMatch: false,
 						selectionChanged: function (evt, ui) {
 							if (ui.items[0].data.id == 1) {
-								if (ui.items[0].data.action == "$$(unfreeze_pane)") {
+								if (ui.items[0].data.action == "ペイン固定を解除") {
 									var currentValue = ui.items[0].data.action;
-									listItems[0].action = "$$(freeze_pane)";
+									listItems[0].action = "ペインを固定";
 									$("#freeze").igCombo("dataBind");
 									$("#freeze").igCombo("text", currentValue);
 								} else {
 									var paneValue = ui.items[0].data.action;
-									listItems[0].action = "$$(unfreeze_pane)";
+									listItems[0].action = "ペイン固定を解除";
 									$("#freeze").igCombo("dataBind");
 									$("#freeze").igCombo("text", paneValue);
 								}
 								$('#spreadsheet2').igSpreadsheet('executeAction', "toggleFreezePanes");
 							} else if (ui.items[0].data.id == 2) {
 								$('#spreadsheet2').igSpreadsheet('executeAction', "freezeFirstRow");
-								listItems[0].action = "$$(unfreeze_pane)";
+								listItems[0].action = "ペイン固定を解除";
 								$("#freeze").igCombo("dataBind");
 								$("#freeze").igCombo("value", ui.items[0].data.action);
 							} else {
 								$('#spreadsheet2').igSpreadsheet('executeAction', "freezeFirstColumn");
-								listItems[0].action = "$$(unfreeze_pane)";
+								listItems[0].action = "ペイン固定を解除";
 								$("#freeze").igCombo("dataBind");
 								$("#freeze").igCombo("value", ui.items[0].data.action);
 							}
