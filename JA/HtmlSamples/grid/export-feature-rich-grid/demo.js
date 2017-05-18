@@ -1,4 +1,12 @@
 $(function () {
+$.ig.loader({
+            scriptPath: "http://dev.igniteui.local/17-1/IgniteUI/js/",
+            cssPath: "http://dev.igniteui.local/17-1/IgniteUI/css/",
+            resources: 'igGrid.*,' +
+                'igGridExcelExporter'
+        });
+
+        $.ig.loader(function () {
             var keys = ["EmployeeID", "FirstName", "LastName", "RegistererDate", "Country", "Age", "IsActive", "Company"],
                 columnsToSkip = [];
 
@@ -117,3 +125,4 @@ $(function () {
         function hideOverlay(exportingOverlay) {
             exportingOverlay.remove();
         }
+});
