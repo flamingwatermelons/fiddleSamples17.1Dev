@@ -18,12 +18,6 @@ $.ig.loader({
 			$("#spreadsheet").igSpreadsheet("option", "workbook", workbook);
 		}
 
-		//set the summary cell to be the selected one
-		function setActiveCell() {
-			var cell = new $.ig.spreadsheet.SpreadsheetCell(16, 6);
-			$("#spreadsheet").igSpreadsheet("option", "activeCell", cell);
-		}
-
 		//using the save method, which is exposed by the Excel library
 		function saveWorkbook(workbook, name) {
 			$("#spreadsheet").igSpreadsheet("option", "workbook")
@@ -106,6 +100,6 @@ $.ig.loader({
 			// Load the workbook in igSpreadsheet
 			loadWorkbook(workbook);
 			//Set summary cell as active cell
-			setActiveCell();
+			$("#spreadsheet").igSpreadsheet("option", "activeCell", "G17");
 		}
 });
