@@ -28,8 +28,8 @@ $(function () {
 				textKey: "text",
 				valueKey: "value",
 				dataSource: [
-					{ value: "Simple Filtering", text: "$$(filtering_simple_filtering)" },
-					{ value: "Search By Text", text: "$$(filtering_search_by_text)" }
+					{ value: "Simple Filtering", text: "Simple Filtering" },
+					{ value: "Search By Text", text: "Search By Text" }
 				],
 				initialSelectedItems : [
 					{ value: "Simple Filtering" }
@@ -52,7 +52,7 @@ $(function () {
 
 			upperPager.prepend(field);
 			field.igTextEditor({
-				placeHolder: "$$(filtering_search_label)",
+				placeHolder: "Search...",
 				height: "22px",
 				textChanged: function (evt, args) {
 					ds.filterByText(args.text);
