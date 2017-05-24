@@ -17,8 +17,7 @@ $(function () {
                                 if (context.isOthersSlice) 
                                     return "15 得点未満のプレーヤー";
                                 return context.item.name + " (" + context.item.goals + ")";
-                            },
-                            outlines: ["#FFFFFF"]
+                            }
                         }
                     ]
 
