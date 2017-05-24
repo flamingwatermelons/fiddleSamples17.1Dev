@@ -28,8 +28,8 @@ $(function () {
 				textKey: "text",
 				valueKey: "value",
 				dataSource: [
-					{ value: "Simple Filtering", text: "Simple Filtering" },
-					{ value: "Search By Text", text: "Search By Text" }
+					{ value: "Simple Filtering", text: "簡易なフィルタリング" },
+					{ value: "Search By Text", text: "テキストで検索する" }
 				],
 				initialSelectedItems : [
 					{ value: "Simple Filtering" }
@@ -52,7 +52,7 @@ $(function () {
 
 			upperPager.prepend(field);
 			field.igTextEditor({
-				placeHolder: "Search...",
+				placeHolder: "検索...",
 				height: "22px",
 				textChanged: function (evt, args) {
 					ds.filterByText(args.text);
