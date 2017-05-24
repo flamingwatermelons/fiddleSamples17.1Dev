@@ -20,7 +20,8 @@ $(function () {
                             dataSource: data,
                             labelsPosition: "center",
                             showTooltip: true,
-                            tooltipTemplate: "budgetTooltipTemplate"
+                            tooltipTemplate: "budgetTooltipTemplate",
+                            outlines: ["#FFFFFF"]
                         },
                         {
                             name: "DepartmentSize",
@@ -29,7 +30,8 @@ $(function () {
                             dataSource: data,
                             labelsPosition: "outsideEnd",
                             showTooltip: true,
-                            tooltipTemplate: "<div class='ui-chart-tooltip'><div class='bold'>${item.Label}</div><div>部署サイズ: <label class='bold'>${item.DepartmentSize}</label></div></div>"
+                            tooltipTemplate: "<div class='ui-chart-tooltip'><div class='bold'>${item.Label}</div><div>部署サイズ: <label class='bold'>${item.DepartmentSize}</label></div></div>",
+                            outlines: ["#FFFFFF"]
                         }
                     ]
             });
