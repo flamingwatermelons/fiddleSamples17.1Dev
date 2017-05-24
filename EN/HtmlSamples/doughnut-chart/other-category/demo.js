@@ -17,8 +17,7 @@ $(function () {
                                 if (context.isOthersSlice) 
                                     return "Players with less than 15 goals";
                                 return context.item.name + " (" + context.item.goals + ")";
-                            },
-                            outlines: ["#FFFFFF"]
+                            }
                         }
                     ]
 

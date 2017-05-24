@@ -21,8 +21,7 @@ $(function () {
                         dataSource: data,
                         formatLabel: function (context) {
                             return "(" + context.itemLabel + ")";
-                        },
-                        outlines: ["#FFFFFF"]
+                        }
                     },
                     {
                         name: "Pop2008",
@@ -32,8 +31,7 @@ $(function () {
                         legend: { element: "legend" },
                         formatLabel: function (context) {
                             return context.itemLabel + " (" + context.item.Pop2008 + ")";
-                        },
-                        outlines: ["#FFFFFF"]
+                        }
                     }
                 ],
                 // the legend items get refreshed every time the doughnut is re-rendered
