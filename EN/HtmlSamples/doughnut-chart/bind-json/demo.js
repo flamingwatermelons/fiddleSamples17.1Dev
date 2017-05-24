@@ -23,7 +23,8 @@ $(function () {
                         },
                         showTooltip: true,
                         tooltipTemplate: "populationTooltipTemplate",
-                        brushes: ["#B284BE", "#5D8AA8", "#C9FFE5", "#7CB9E8", "#F19CBB"]
+                        brushes: ["#B284BE", "#5D8AA8", "#C9FFE5", "#7CB9E8", "#F19CBB"],
+                        outlines: ["#FFFFFF"]
                     }]
                 });
             });
