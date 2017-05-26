@@ -25,7 +25,7 @@ var northwindEmployees = [
 					this.currCallbacks = callbacks;
 					var tmpContainer = $("#templateContainer");
 					//appending teh div and the image elemnts
-					tmpContainer.parent().append('<div id="container" style="width: 35%;float: right;position:relative; padding-top:5%; margin-top: 32px; margin-left: 20px;"><img id="imgTmp" src="" alt="" title="" width="150px" height="150px"/><div id="tooltip" style="margin-padding:5px; position:absolute; top:65px; left:50px;" ></div></div>');
+					tmpContainer.parent().prepend('<div id="container" style="width: 35%;float: left;position:relative; padding-top:5%; margin-top: 32px; margin-left: 20px;"><img id="imgTmp" src="" alt="" title="" width="150px" height="150px"/><div id="tooltip" style="margin-padding:5px; position:absolute; top:65px; left:50px;" ></div></div>');
 					tmpContainer.parent().append('<div style="clear:both;"></div><div id="error-message" style="float: right;color: #FF0000; font-weight: bold;"></div>');
 					this.createUpload();
 					this.image = $("#imgTmp");
