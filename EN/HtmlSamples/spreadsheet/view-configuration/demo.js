@@ -100,7 +100,7 @@ $.ig.loader({
 						textKey: "action",
 						valueKey: "action",
 						width: "150px",
-						allowCustomeValue: true,
+						enableClearButton : false,
 						autoSelectFirstMatch: false,
 						selectionChanged: function (evt, ui) {
 							if (ui.items[0].data.id == 1) {
