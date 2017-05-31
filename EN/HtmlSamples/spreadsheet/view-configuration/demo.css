@@ -1,4 +1,8 @@
-.sampleContainer .ui-tabs .ui-tabs-panel {
+.ui-igspreadsheet .ui-menu-item {
+            white-space:nowrap;
+        }
+
+		.sampleContainer .ui-tabs .ui-tabs-panel {
             background:#efefef;
             border-radius:0;
             border-color:#ddd;
@@ -121,10 +125,6 @@
         .ui-widget.ui-widget-content.spreadsheet-sample {
             border:none;
             border-radius:0;
-        }
-
-        .ui-igspreadsheet .ui-menu-item {
-            white-space:nowrap;
         }
 
         .show-row {

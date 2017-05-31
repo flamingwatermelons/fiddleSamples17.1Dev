@@ -1,4 +1,7 @@
-.spreadsheet-sample-btn
+.ui-igspreadsheet .ui-menu-item {
+            white-space:nowrap;
+        }
+        .spreadsheet-sample-btn
         {
             max-width: 200px;
             padding: 8px;
