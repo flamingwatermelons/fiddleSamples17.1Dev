@@ -1,7 +1,7 @@
 $(function () {
 $.ig.loader({
             scriptPath: "http://dev.igniteui.local/17-1/IgniteUI/js/",
-            resources: 'igExcel'
+            resources: 'igExcel,' + 'LoadSaveXlsx'
         });
 
         function createFormulasWorkbook() {
