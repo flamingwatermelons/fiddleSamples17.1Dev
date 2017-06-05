@@ -1,12 +1,4 @@
 $(function () {
-$.ig.loader({
-            scriptPath: "http://dev.igniteui.local/17-1/IgniteUI/js/",
-            cssPath: "http://dev.igniteui.local/17-1/IgniteUI/css/",
-            resources: 'igGrid,' +
-                'igExcel,' + 'LoadSaveXlsx'
-        });
-
-        $.ig.loader(function () {
             $("#input").on("change", function () {
                 var excelFile,
                     fileReader = new FileReader();
@@ -69,7 +61,7 @@ $.ig.loader({
                 }
 
             })
-        })
+        });
 
         function createGrid(data, gridColumns) {
             if ($("#grid1").data("igGrid") !== undefined) {
@@ -83,4 +75,3 @@ $.ig.loader({
                 width: "100%"
             });
         }
-});
