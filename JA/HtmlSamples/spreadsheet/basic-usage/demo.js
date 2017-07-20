@@ -1,14 +1,10 @@
-$(function () {
-$.ig.loader({
-			scriptPath: "http://dev.igniteui.local/17-1/IgniteUI/js/",
-			cssPath: "http://dev.igniteui.local/17-1/IgniteUI/css/",
-			resources: "igSpreadsheet,igExcel.LoadSaveXlsx,igExcel.Functions,igEditors",
-			ready: function () {
+$( function () {
+			$("#create").click(function () {
 				if ($("#spreadsheet1").length !== 0) {
 					$("#spreadsheet1").igSpreadsheet({
 						height: "600",
 						width: "100%",
-						activeWorksheetChanged: function(evt, ui) {
+						activeWorksheetChanged: function (evt, ui) {
 							if (ui.newActiveWorksheetName == "Statistics") {
 								$("#spreadsheet1").igSpreadsheet("option", "activeCell", "E7");
 							} else {
@@ -42,6 +38,5 @@ $.ig.loader({
 						$("#spreadsheet1").igSpreadsheet("option", "zoomLevel", "95");
 					}
 				}
-			}
+			});
 		});
-});
