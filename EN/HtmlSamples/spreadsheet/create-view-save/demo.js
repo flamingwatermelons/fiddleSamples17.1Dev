@@ -1,16 +1,10 @@
-$(function () {
-$.ig.loader({
-			scriptPath: "http://dev.igniteui.local/17-1/IgniteUI/js/",
-			cssPath: "http://dev.igniteui.local/17-1/IgniteUI/css/",
-			resources: "igSpreadsheet, igExcel.LoadSaveXlsx, igExcel.LoadSaveXls, igExcel.Functions",
-			ready: function () {
-				//Initializing igSpreadsheet
-				$("#spreadsheet").igSpreadsheet({
-					height: "600",
-					width: "100%",
-					isFormulaBarVisible: true
-				});
-			}
+$( function () {
+			//Initializing igSpreadsheet
+			$("#spreadsheet").igSpreadsheet({
+				height: "600",
+				width: "100%",
+				isFormulaBarVisible: true
+			});
 		});
 
 		//display the workbook via igSpreadsheet
@@ -102,4 +96,3 @@ $.ig.loader({
 			//Set summary cell as active cell
 			$("#spreadsheet").igSpreadsheet("option", "activeCell", "G17");
 		}
-});
