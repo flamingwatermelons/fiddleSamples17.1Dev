@@ -35,6 +35,5 @@ $(function () {
                 });
             }
 
-            createChart("#chartRangeArea", "rangeArea", data);
             createChart("#chartRangeColumn", "rangeColumn", data);
         });
