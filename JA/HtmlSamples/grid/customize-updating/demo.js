@@ -98,7 +98,7 @@ var northwindEmployees = [
 			$.widget("ui.SplitterDialog", $.ui.igGridModalDialog, {
 			_create: function () {
 				var d = this.element, self = this, gc, header, footer, $buttonSet, $buttonOK, $buttonCancel, o = this.options, self = this,
-				outerContianer;
+				outerContianer, closeButton, btnContainer;
 				// get the grid's container
 				gc = d.closest(".ui-iggrid");
 
@@ -129,6 +129,25 @@ var northwindEmployees = [
 					.css("padding", "4px")
 					.text(this.options.modalDialogCaptionText)
 					.appendTo(d);
+
+				//adding close button
+				btnContainer = $("<div></div>").appendTo(header).addClass("ui-iggrid-modaldialog-caption-buttoncontainer");
+
+				closeButton = $("<button type='button'></button>")
+				.attr("id","dialog_closeButton")
+				.appendTo(btnContainer);
+
+				closeButton.igButton({
+				onlyIcons: true,
+				icons: {
+					primary: "ui-icon-close"
+				},
+				width: "20px",
+				height: "20px",
+				click: function () {
+					self.closeModalDialog(false, true);
+				}
+				});
 
 				//adding footer
 				footer = $("<div class='dialogFooter'></div>")
@@ -270,8 +289,8 @@ var northwindEmployees = [
 					d.prev().hide();
 
 					this._customSplitterContainer.igSplitter("setFirstPanelSize", "100%");
+					this._customSplitterContainer.igSplitter("firstPanel").css("width", "100%");
 				}
-
 			}
 		});
 
