@@ -118,7 +118,7 @@ var northwindEmployees = [
 						height: "400px",
 						panels: [
 							{ size: "30%" },
-							{ size: "70%" }
+							{ size: "70%", collapsible: true }
 						]
 					}
 					);
